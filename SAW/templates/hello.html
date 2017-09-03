@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<body>
+<h1>Hello dear user: {{ username }}</h1>
+	<span style="display: block;">Here is your email notification message:<span>
+	{% if error %}
+	    <span style="display: block; padding: 10px; color: red">{{ error }}</span>
+	{% else %}
+	    <textarea rows="10" cols="66" name="template" style="display: block; margin: 10px">{{ emailMessage | safe }}</textarea>
+	{% endif %}
+	<hr/>
+	<form action="/contacto/updateUsername" method="POST">
+	    <label for="username" style="display: block;">Change your username:</label>
+	    <input type="text" name="username" style="display: block; margin: 10px; width: 400px" value="{{ username }}"/>
+	    <input type="submit" style="display: block; margin: 10px"/>
+	</form>
+	<form action="/contacto/updateEmailMessage" method="POST">
+    	<label for="template" style="display: block;">Change your email notification message (type "{% raw %}{{ username }}{% endraw %}" where you want your real username):</label>
+    	<textarea rows="10" cols="66" name="template" style="display: block; margin: 10px">{{ template }}</textarea>
+    	<input type="submit" style="display: block; margin: 10px"/>
+    </form>
+</body>
+
+</html>
