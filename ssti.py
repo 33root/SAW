@@ -85,20 +85,20 @@ def perfil():
 
 @app.route("/perfil/settings_update", methods=['POST'])
 def settings_update():
-    username = str(request.values.get('username'))
+    # username = str(request.values.get('username'))
 
     # SSTI VULNERABILITY
     # The vulnerability is introduced concatenating the
     # user-provided `name` variable to the template string.
-    output = Jinja2.from_string('Hello ' + username + '!').render()
+    ##output = Jinja2.from_string('Hello ' + username + '!').render()
 
     # Instead, the variable should be passed to the template context.
     # Jinja2.from_string('Hello {{name}}!').render(name = name)
 
-    # response = app.make_response(flask.redirect('/perfil'))
-    # response.set_cookie('username', base64.b64encode(
-    #    flask.request.form['username']))
-    return output
+    response = app.make_response(flask.redirect('/perfil'))
+    response.set_cookie('username', base64.b64encode(
+        flask.request.form['username']))
+    return response
 
 
 if __name__ == "__main__":
