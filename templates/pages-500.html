@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -11,20 +11,20 @@
         <title>VulnAdminPanel - Responsive Admin Dashboard Template</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-reset.css" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/bootstrap-reset.css')}}" rel="stylesheet">
 
         <!--Animation css-->
-        <link href="css/animate.css" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/animate.css')}}" rel="stylesheet">
 
         <!--Icon-fonts css-->
-        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
-        <link href="assets/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet" />
+        <link href="{{url_for('static', filename='assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
+        <link href="{{url_for('static', filename='assets/ionicon/css/ionicons.min.css')}}" rel="stylesheet" />
+        <link href="{{url_for('static', filename='assets/material-design-iconic-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" />
 
         <!-- Custom styles for this template -->
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/helper.css" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+        <link href="{{url_for('static', filename='css/helper.css')}}" rel="stylesheet">
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
@@ -45,22 +45,22 @@
                 <h2 class="font-light">Internal Server Error.</h2><br>
                 <p>Why not try refreshing your page? or you can contact <a href="#">support</a></p>
                 
-                <a class="btn btn-success m-t-20" href="index.html"><i class="fa fa-angle-left"></i> Back to Dashboard</a>
+                <a class="btn btn-success m-t-20" href="/"><i class="fa fa-angle-left"></i> Back to Dashboard</a>
             </div>
             
         </div>
 
 
         <!-- js placed at the end of the document so the pages load faster -->
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/pace.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-            
+        <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+        <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/pace.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/wow.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.nicescroll.js')}}" type="text/javascript"></script>
+
 
         <!--common script for all pages-->
-        <script src="js/jquery.app.js"></script>
+        <script src="{{url_for('static', filename='js/jquery.app.js')}}"></script>
 
     
     </body>
